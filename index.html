@@ -248,10 +248,26 @@ html{ scroll-behavior:smooth; }
       rgba(198,222,235,.60) 100%),
     var(--avorio);
 }
-.quota__cifra{
-  font-family:var(--display); font-size: clamp(2rem, 8.4vw, 4.2rem);
+/* due quote affiancate, divise da un filetto dorato */
+.quota__prezzi{
+  display:flex; flex-wrap:wrap; align-items:stretch; justify-content:center;
+  gap: clamp(1.2rem, 4.5vw, 3.4rem);
+}
+.prezzo{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.35rem; }
+.prezzo__cifra{
+  font-family:var(--display); font-size: clamp(1.9rem, 5.6vw, 3.3rem);
   line-height:1.05; color: var(--notte);
   white-space: nowrap;   /* "60 €/incontro" non deve mai spezzarsi */
+}
+.prezzo__nota{
+  font-size:.66rem; letter-spacing:.24em; text-transform:uppercase; color: var(--grigio);
+}
+.prezzo__divisore{ width:1px; background: var(--oro-linea); opacity:.65; }
+@media (max-width: 560px){
+  /* in colonna, altrimenti il filetto si accoda alla prima quota
+     invece di stare in mezzo alle due */
+  .quota__prezzi{ flex-direction:column; gap:1rem; }
+  .prezzo__divisore{ width:64px; height:1px; align-self:center; }
 }
 .badge{
   font-size:.66rem; letter-spacing:.24em; text-transform:uppercase;
@@ -547,7 +563,17 @@ html{ scroll-behavior:smooth; }
 <section class="quota">
   <div class="contenitore centrata rivela">
     <p class="occhiello">Quota di partecipazione</p>
-    <span class="quota__cifra">60&thinsp;&euro;/incontro</span>
+    <div class="quota__prezzi">
+      <div class="prezzo">
+        <span class="prezzo__cifra">70&thinsp;&euro;</span>
+        <span class="prezzo__nota">Incontro singolo</span>
+      </div>
+      <span class="prezzo__divisore"></span>
+      <div class="prezzo">
+        <span class="prezzo__cifra">60&thinsp;&euro;/incontro</span>
+        <span class="prezzo__nota">Due o pi&ugrave; incontri</span>
+      </div>
+    </div>
     <span class="badge">Posti limitati</span>
   </div>
 </section>
