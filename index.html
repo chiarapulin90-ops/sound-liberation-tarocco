@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Sound Liberation &amp; Tarocco Intuitivo: un viaggio dentro di te attraverso i 4 elementi. Quattro incontri con Raffaello Cavaggioni e Chiara Pulin, tra Thiene (VI) e San Bonifacio (VR).">
-<meta property="og:site_name" content="Sound Liberation &amp; Tarocco Intuitivo">
-<meta property="og:title" content="Sound Liberation &amp; Tarocco Intuitivo">
+<meta name="description" content="Bagno di Suono &amp; Tarocco Intuitivo: un viaggio dentro di te attraverso i 4 elementi. Quattro incontri con Raffaello Cavaggioni e Chiara Pulin, tra Thiene (VI) e San Bonifacio (VR).">
+<meta property="og:site_name" content="Bagno di Suono &amp; Tarocco Intuitivo">
+<meta property="og:title" content="Bagno di Suono &amp; Tarocco Intuitivo">
 <meta property="og:description" content="Un viaggio dentro di te, attraverso i 4 elementi. Quattro incontri di Tarocco intuitivo e bagno di suono, da novembre 2026 ad aprile 2027.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sound-liberation-tarocco.vercel.app/">
@@ -89,6 +89,9 @@ html{ scroll-behavior:smooth; }
 .sez{ padding: clamp(2.1rem, 4.2vw, 3.5rem) 0; }
 .centrata{ display:flex; flex-direction:column; align-items:center; gap:1.2rem; text-align:center; }
 .giust{ text-align:justify; hyphens:auto; -webkit-hyphens:auto; }
+/* su un paragrafo con .intero le parole non vengono spezzate col trattino:
+   vanno a capo intere */
+.intero{ hyphens:none; -webkit-hyphens:none; }
 
 .occhiello{
   font-size:.68rem; letter-spacing:.3em; text-transform:uppercase;
@@ -186,6 +189,11 @@ html{ scroll-behavior:smooth; }
   display:flex; flex-direction:column; gap:.9rem;
 }
 .duo h3{ font-size:1.7rem; color: var(--notte); text-align:center; }
+/* la frase che chiude la sezione, sotto i due riquadri */
+.dopo-duo{
+  margin: clamp(1.3rem, 3vw, 2rem) auto 0;
+  max-width: 60ch; text-align:center; color: var(--grigio);
+}
 /* i simboli e l'intuizione: velature calde, oro e fuoco */
 .duo article:first-child{
   background:
@@ -449,7 +457,7 @@ html{ scroll-behavior:smooth; }
   <div class="apertura__velo"></div>
   <div class="apertura__testo contenitore centrata">
     <p class="occhiello">Quattro incontri</p>
-    <h1>Sound Liberation<br><span class="amp">&amp;</span> Tarocco Intuitivo</h1>
+    <h1>Bagno di Suono<br><span class="amp">&amp;</span> Tarocco Intuitivo</h1>
     <p class="apertura__sotto">Un viaggio dentro di te, attraverso i 4 elementi.</p>
     <svg class="orn" viewBox="0 0 240 88" fill="none" aria-hidden="true" focusable="false"><g stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M28 18h74M138 18h74"/></g><g fill="currentColor"><path d="M14 18 28 13v10z"/><path d="M226 18 212 13v10z"/><circle cx="120" cy="18" r="5"/><circle cx="34" cy="18" r="1.6"/><circle cx="206" cy="18" r="1.6"/></g><path d="M120 30c5 8 7.5 11.5 7.5 15a7.5 7.5 0 0 1-15 0c0-3.5 2.5-7 7.5-15z" fill="currentColor"/><g stroke="currentColor" stroke-width=".7" stroke-linecap="round" opacity=".55" transform="translate(120 24)"><g transform="rotate(24)"><path d="M0 16v20"/></g><g transform="rotate(33)"><path d="M0 16v13"/></g><g transform="rotate(42)"><path d="M0 16v22"/></g><g transform="rotate(51)"><path d="M0 16v14"/></g><g transform="rotate(60)"><path d="M0 16v23"/></g><g transform="rotate(69)"><path d="M0 16v14"/></g><g transform="rotate(78)"><path d="M0 16v21"/></g><g transform="rotate(87)"><path d="M0 16v12"/></g><g transform="rotate(-24)"><path d="M0 16v20"/></g><g transform="rotate(-33)"><path d="M0 16v13"/></g><g transform="rotate(-42)"><path d="M0 16v22"/></g><g transform="rotate(-51)"><path d="M0 16v14"/></g><g transform="rotate(-60)"><path d="M0 16v23"/></g><g transform="rotate(-69)"><path d="M0 16v14"/></g><g transform="rotate(-78)"><path d="M0 16v21"/></g><g transform="rotate(-87)"><path d="M0 16v12"/></g></g></svg>
     <p class="apertura__firma">con Raffaello Cavaggioni e Chiara Pulin</p>
@@ -459,7 +467,7 @@ html{ scroll-behavior:smooth; }
       <span>Thiene (VI) &amp; San Bonifacio (VR)</span>
     </p>
     <div class="apertura__azioni">
-      <a class="bottone bottone--blu" href="mailto:raffaellocavaggioni@gmail.com?subject=Prenotazione%20Sound%20Liberation%20%26%20Tarocco%20Intuitivo&amp;body=Ciao%20Raffaello%2C%20vorrei%20prenotare%20il%20mio%20posto%20per%20l%27incontro%20di%3A%20">Prenota il tuo posto</a>
+      <a class="bottone bottone--blu" href="mailto:raffaellocavaggioni@gmail.com?subject=Prenotazione%20Bagno%20di%20Suono%20%26%20Tarocco%20Intuitivo&amp;body=Ciao%20Raffaello%2C%20vorrei%20prenotare%20il%20mio%20posto%20per%20l%27incontro%20di%3A%20">Prenota il tuo posto</a>
       <a class="bottone bottone--oro" href="#date">Scopri le date</a>
     </div>
   </div>
@@ -468,7 +476,7 @@ html{ scroll-behavior:smooth; }
 <!-- ============ prosa, prima parte ============ -->
 <section class="sez">
   <div class="stretto prosa rivela">
-    <p class="giust">Un&rsquo;esperienza aperta a tutti, nata dalla sinergia tra il potere del suono e l&rsquo;esplorazione simbolica degli Arcani Maggiori del Tarocco.</p>
+    <p class="giust intero">Un&rsquo;esperienza aperta a tutti, nata dalla sinergia tra il potere del suono e l&rsquo;esplorazione simbolica degli Arcani Maggiori del Tarocco.</p>
     <p class="giust">Quattro incontri, uno per ciascun elemento: puoi partecipare a quello che pi&ugrave; ti chiama, oppure seguire il percorso completo.</p>
   </div>
 </section>
@@ -481,16 +489,8 @@ html{ scroll-behavior:smooth; }
   </div>
 </section>
 
-<!-- ============ prosa, seconda parte ============ -->
-<section class="sez">
-  <div class="stretto prosa rivela">
-    <p class="giust">Con gli archetipi daremo voce alla nostra anima e lasceremo emergere messaggi, risorse e intuizioni che gi&agrave; risiedono in noi. Le frequenze sonore ispirate all&rsquo;elemento che esploreremo, accompagneranno le intuizioni dalla mente al corpo, per armonizzarle in profondit&agrave;.</p>
-    <p class="giust">Sar&agrave; uno spazio di presenza e ascolto, protetto e leggero, in cui non serve avere conoscenze pregresse di alcun tipo.</p>
-  </div>
-</section>
-
 <!-- ============ cosa vivremo insieme ============ -->
-<section class="sez" style="padding-top:0;">
+<section class="sez">
   <div class="contenitore rivela">
     <div class="centrata" style="margin-bottom:1.5rem;">
       <h2 class="titolo-sez">Cosa vivremo insieme</h2>
@@ -498,13 +498,14 @@ html{ scroll-behavior:smooth; }
     <div class="duo">
       <article>
         <h3>Simboli e Intuizione</h3>
-        <p class="giust">Esploreremo una tematica usando il Tarocco come strumento di consapevolezza, attraverso pratiche esperienziali individuali e momenti di condivisione.</p>
+        <p class="giust">Il Tarocco sar&agrave; uno strumento pratico per far emergere le risposte che sono gi&agrave; dentro di te. Attraverso esercizi creativi, individuali e di gruppo, sarai guidato nel riconoscerne il messaggio della carta che pescherai.</p>
       </article>
       <article>
         <h3>Vibrazione e Integrazione</h3>
         <p class="giust">Il suono rilasser&agrave; la mente e ti permetter&agrave; di vivere l&rsquo;esperienza con apertura e serenit&agrave;. Chiuderemo la giornata con un Bagno di Suono in cui lasciarsi cullare, per radicare tutto ci&ograve; che &egrave; emerso.</p>
       </article>
     </div>
+    <p class="dopo-duo">Sar&agrave; uno spazio di presenza e ascolto, protetto e leggero, in cui non serve avere conoscenze pregresse di alcun tipo.</p>
   </div>
 </section>
 
@@ -639,8 +640,7 @@ html{ scroll-behavior:smooth; }
         <div class="persona__corpo">
           <span class="ruolo">Tarocco esperienziale</span>
           <h3>Chiara Pulin</h3>
-          <p class="giust">Condivido i principi del Lavoro su di s&eacute; attraverso il Tarocco, che diviene mappa del mondo interiore e guida al risveglio della coscienza.</p>
-          <p class="giust">Mi sono formata con Fabiana Spagnuolo e sto approfondendo con Carlo Bozzelli. Ho sviluppato un approccio esperienziale per far conoscere il Tarocco in modo unico e integrarlo con altri strumenti.</p>
+          <p class="giust">Divulgo il Tarocco di Marsiglia come strumento di Lavoro su di s&eacute;, quale specchio del mondo interiore e bussola nella vita quotidiana. Ho creato un approccio esperienziale per farlo conoscere in modo pratico e intuitivo, e farne sperimentare la magia e l&rsquo;utilit&agrave; anche a chi non lo ha mai incontrato.</p>
           <div class="social">
             <a href="https://www.instagram.com/chiara_pulin/" aria-label="Instagram di Chiara Pulin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
             <a href="https://www.chiarapulin.com/" aria-label="Sito di Chiara Pulin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></a>
@@ -673,7 +673,7 @@ html{ scroll-behavior:smooth; }
 <!-- ============ piede ============ -->
 <footer class="piede">
   <div class="contenitore">
-    <p class="piede__nota">Sound Liberation &amp; Tarocco Intuitivo &mdash; Raffaello Cavaggioni &amp; Chiara Pulin</p>
+    <p class="piede__nota">Bagno di Suono &amp; Tarocco Intuitivo &mdash; Raffaello Cavaggioni &amp; Chiara Pulin</p>
   </div>
 </footer>
 
