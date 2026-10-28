@@ -17,7 +17,7 @@
 <meta property="og:locale" content="it_IT">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-<body><title>Quattro Elementi, Quattro Incontri</title>
+<body><title>Bagno di Suono &amp; Tarocco Intuitivo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Montserrat:wght@200;300;400;500&amp;display=swap">
@@ -88,7 +88,12 @@ html{ scroll-behavior:smooth; }
 .stretto{ width:var(--mis-stretto); margin-inline:auto; }
 .sez{ padding: clamp(2.1rem, 4.2vw, 3.5rem) 0; }
 .centrata{ display:flex; flex-direction:column; align-items:center; gap:1.2rem; text-align:center; }
-.giust{ text-align:justify; hyphens:auto; -webkit-hyphens:auto; }
+.giust{ text-align:justify; hyphens:none; -webkit-hyphens:none; }
+/* Nei riquadri stretti le righe sono corte: giustificare senza spezzare
+   le parole aprirebbe buchi enormi fra una parola e l'altra. Li' il
+   testo resta allineato a sinistra. Nella colonna larga, che e' molto
+   piu' ampia, la giustificazione funziona e resta. */
+.duo p.giust, .persona p.giust, .noi p.giust{ text-align:left; }
 /* su un paragrafo con .intero le parole non vengono spezzate col trattino:
    vanno a capo intere */
 .intero{ hyphens:none; -webkit-hyphens:none; }
@@ -422,6 +427,9 @@ html{ scroll-behavior:smooth; }
 
 @media (max-width: 760px){
   :root{ --alt-banda: 5.2rem; --mis: min(1060px, 100% - 2rem); }
+  /* su schermo stretto anche la colonna larga diventa corta:
+     qui la giustificazione lascerebbe buchi, quindi si allinea a sinistra */
+  .giust{ text-align:left; }
   /* l'apertura deve stare in uno schermo, perche' la banda fissa
      non arrivi a coprire i due pulsanti */
   .centrata{ gap:.8rem; }
